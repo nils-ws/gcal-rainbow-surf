@@ -63,9 +63,10 @@ const mergeEventElements = (events) => {
       border: eventToKeep.style.border,
     };
     var newColors = [];
-    colors.forEach((color) => newColors.push(color.toString().replace(')', ', 0.75)').replace('rgb', 'rgba')));
+    colors.forEach((color) => newColors.push(color.toString().replace(')', ', 1)').replace('rgb', 'rgba')));
     eventToKeep.style.backgroundImage = rainbow(newColors, 10, 45);
     eventToKeep.style.backgroundColor = 'unset';
+    eventToKeep.style.backgroundSize = 'unset';
     eventToKeep.style.left =
       Math.min.apply(
         Math,
